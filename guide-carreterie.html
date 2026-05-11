@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Page de présentation du Guide Carreterie proposé par Ruby DAO."
+    />
+    <title>Guide Carreterie | Ruby DAO</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --background: #f6f8fb;
+        --card: #ffffff;
+        --ink: #192033;
+        --muted: #657089;
+        --accent: #7c3aed;
+        --accent-dark: #5b21b6;
+        --shadow: 0 24px 70px rgba(25, 32, 51, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        line-height: 1.6;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(124, 58, 237, 0.2), transparent 32rem),
+          linear-gradient(180deg, #ffffff 0%, var(--background) 100%);
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .hero {
+        display: grid;
+        gap: 28px;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .badge {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 8px 14px;
+        border-radius: 999px;
+        color: var(--accent-dark);
+        background: rgba(124, 58, 237, 0.12);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      h1 {
+        max-width: 860px;
+        margin: 0 auto;
+        font-size: clamp(2.2rem, 6vw, 4.8rem);
+        line-height: 1;
+        letter-spacing: -0.06em;
+      }
+
+      .intro {
+        max-width: 720px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.25rem);
+      }
+
+      .viewer-card {
+        overflow: hidden;
+        border: 1px solid rgba(101, 112, 137, 0.16);
+        border-radius: 24px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+
+      .canva-frame {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+        overflow: hidden;
+        background: #edf0f7;
+      }
+
+      .canva-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 22px;
+      }
+
+      .actions p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 22px;
+        border-radius: 999px;
+        color: #ffffff;
+        background: var(--accent);
+        font-weight: 800;
+        text-decoration: none;
+        transition:
+          transform 180ms ease,
+          background-color 180ms ease,
+          box-shadow 180ms ease;
+        box-shadow: 0 12px 24px rgba(124, 58, 237, 0.24);
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        background: var(--accent-dark);
+        transform: translateY(-2px);
+      }
+
+      .button:focus-visible {
+        outline: 4px solid rgba(124, 58, 237, 0.28);
+        outline-offset: 3px;
+      }
+
+      footer {
+        margin-top: 28px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          width: min(100% - 20px, 1120px);
+          padding: 32px 0;
+        }
+
+        .actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="badge">Présentation interactive</p>
+        <h1 id="page-title">Guide Carreterie</h1>
+        <p class="intro">
+          Consultez directement le guide intégré ci-dessous ou ouvrez-le dans Canva
+          pour profiter de l'affichage plein écran.
+        </p>
+      </section>
+
+      <section class="viewer-card" aria-label="Visionneuse du Guide Carreterie">
+        <div class="canva-frame">
+          <iframe
+            loading="lazy"
+            src="https://www.canva.com/design/DAGxh7ubgXg/JIYOebIsBM_539depE1isQ/view?embed"
+            allowfullscreen="allowfullscreen"
+            allow="fullscreen"
+            title="Guide Carreterie par Ruby DAO"
+          ></iframe>
+        </div>
+        <div class="actions">
+          <p>Guide Carreterie par Ruby DAO</p>
+          <a
+            class="button"
+            href="https://www.canva.com/design/DAGxh7ubgXg/JIYOebIsBM_539depE1isQ/view?utm_content=DAGxh7ubgXg&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Ouvrir le guide dans Canva</a>
+        </div>
+      </section>
+
+      <footer>
+        <p>Une page simple et responsive pour partager le Guide Carreterie.</p>
+      </footer>
+    </main>
+  </body>
+</html>
